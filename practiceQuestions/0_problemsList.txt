@@ -1,0 +1,165 @@
+Problems from day:1 to day:3
+1. Print table of given number
+2. calculate simple interest and compound interest
+3. sum of two digits
+4. swap two numbers
+5. find the largest numbers among three
+6. check given number is even or odd
+7. check input char is vowel or consonent
+8. convert decimal to binary
+9. convert binary to decimal
+
+
+Problems of the day: 4
+10. Calculate power
+Example: If the base is 2 and the exponent is 3, the output should be 2^3 = 8.(you can take base and expo both as input)
+
+11. Calculate Factorial
+Example: If the input is 5, the output should be 5! = 5 * 4 * 3 * 2 * 1 = 120.
+
+12. Reverse a Number
+Example: If the input is 12345, the output should be 54321.
+
+
+Questions of the day 5:
+13.Program to print a heart symbol (❤)
+
+14.Program to count the number of digits in the integer
+(eg. 34282, Digits: 5)
+
+15.Implement a basic calculator
+
+
+Problems of the day 6 :
+16.Palindrome Check: Write a program to check if a number reads the same forward and backward.
+Example: Input: 12321, Output: Palindrome
+
+17.Sum of Digits: Write a program to calculate the sum of digits of a given integer.
+Example: Input: 45678, Output: 30
+
+18. Armstrong Number Check: Write a program to check if a number is an Armstrong number.
+Example: If the input is 371, the output should be "Armstrong number" because: 3 ^3+7 ^3+1 ^3=27+343+1=371.
+
+
+Day 7:
+19. Write a program to print frequency of each digit
+      (Input:- 3345354
+       Output:- 3- 3 times
+                      4- 2 times
+                      5- 2 times)
+20.Write a program to calculate HCF of two numbers
+
+21.Write a program to print sum of first and lsst digit of a number
+
+
+Problems for day 8
+22. Print pyramid
+       Sample:-
+           *
+          * *
+         * * *
+        * * * *
+       * * * * *
+
+23.Print inverted pyramid
+Sample:-
+      * * * * *
+       * * * *
+        * * *
+         * * 
+          *
+
+24.Print hollow pyramid
+Sample:-
+           *
+          * *
+         *   *
+        *     *
+       *********
+
+
+Problems of the day 9:
+25. Print Diamond pattern
+Sample:
+    *
+   ***
+  *****
+ *******
+  *****
+   ***
+    *
+
+26. Print Pascal's Triangle:
+Sample:
+     1
+    1 1
+   1 2 1
+  1 3 3 1
+ 1 4 6 4 1
+
+27.Print Floyd's Triangle:
+Sample:
+1
+2 3
+4 5 6
+7 8 9 10
+
+
+Problems of the day 10:
+28. Print Butterfly pattern
+Sample:
+*        *
+**      **
+***    ***
+****  ****
+**********
+**********
+****  ****
+***    ***
+**      **
+*        *
+
+
+29. Print Hollow Butterfly pattern
+Sample:
+*        *
+**      **
+* *    * *
+*  *  *  *
+*   **   *
+*   **   *
+*  *  *  *
+* *    * *
+**      **
+*        *
+
+
+30 Prime Number Check: Write a program to check if a given number is a prime number or not.
+
+
+Problems of the day 11:
+31.Write a program to check if a given year is a <leap year> or not. 
+A leap year is a year that is evenly divisible by 4, except for years that are divisible by 100 but not divisible by 400.
+Example: 2000 and 2008 are leap years, while 1900 is not a leap year.
+
+32. Write a program to check if a given number is an <abundant number> or not.
+An abundant number is a number for which the sum of its proper divisors is greater than the number itself.
+Example: 12 is an abundant number because the sum of its proper divisors (1, 2, 3, 4, 6) equals 16, which is greater than 12.
+
+33. Write a program to print the <Fibonacci series> up to a given number of terms.
+The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones.
+Example: 0, 1, 1, 2, 3, 5, 8, 13, ...
+
+
+Problems of the day 12:
+34. Write a program to set the K-th bit of a given number.
+Given a number N and a position K, set the K-th bit of N to 1.
+Example: If the number is 5 (binary 101) and K is 1, after setting the first bit (from right to left), the resulting number should be 4 (binary 100).
+
+35. Write a program to count all set bits in a given number.
+Given a number N, count the number of set bits (bits with a value of 1) in its binary representation.
+Example: For the number 7 (binary 111), there are three set bits.
+
+36. Write a program to create a number using bits according to a given pattern.
+Given a specific pattern or condition, create a number using bits.
+Example: Creating the largest possible number with 4 bits results in 15 (binary 1111).
