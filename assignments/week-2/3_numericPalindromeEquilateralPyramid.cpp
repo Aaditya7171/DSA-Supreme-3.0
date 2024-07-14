@@ -16,6 +16,31 @@ void printNumericPalindromeEquilateralPyramid(int n)
     }
 
 }
+void printNumericPalindromeEquilateralPyramidAp2(int n)
+{
+    int k = n;
+    for(int row = 0; row < n; row++){
+        int c = 1;
+        for(int col = 0; col < k; col++){
+            if(col<n-row-1){
+                std::cout << "  ";
+            }
+            else if(col < n){
+                std::cout << c++ << " ";
+            }
+            else if(col == n){
+                c = c - 2;
+                std::cout << c-- << " ";
+            }
+            else{
+                std::cout << c-- << " ";
+            }
+        }
+        k++;
+        std::cout << '\n';
+    }
+}
+
 
 int main()
 {
@@ -23,7 +48,8 @@ int main()
     std::cout << "Enter n: ";
     std::cin >> n;
 
-    printNumericPalindromeEquilateralPyramid(n);
+    // printNumericPalindromeEquilateralPyramid(n);
+    printNumericPalindromeEquilateralPyramidAp2(n);
 
     return 0;
 }
