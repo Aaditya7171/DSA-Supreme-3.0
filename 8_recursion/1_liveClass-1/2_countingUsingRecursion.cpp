@@ -16,6 +16,7 @@ void printReverseCounting(int n)
     printReverseCounting(n-1);
 
 }
+
 //head recursion
 void printCounting(int n)
 {
@@ -28,7 +29,6 @@ void printCounting(int n)
 
 }
 
-
 int main()
 {
     int n = 5;
@@ -36,7 +36,6 @@ int main()
     printReverseCounting(n);
 
     std::cout << '\n';
-
 
     printCounting(n);
 

@@ -4,7 +4,7 @@ int findFactorial(int n){
 
     if(n == 0 || n == 1) return 1;//base case
 
-    int fact = n * findFactorial(n-1);//recurive call
+    int fact = n * findFactorial(n-1);//recurive call and processing
     
     return fact;
 }
