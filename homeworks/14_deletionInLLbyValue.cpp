@@ -1,16 +1,14 @@
 #include<iostream>
 
-class Node{
+class Node {
 public:
     int data;
     Node* next;
 
-    Node(int value)
-    {
+    Node(int value) {
         this->data = value;
         this->next = NULL;
     }
-
 };
 
 Node* insertAtTail(int value, Node* &head, Node* &tail) {
@@ -45,16 +43,10 @@ void deleteFromLL(Node* &head, Node* &tail, int value)
         std::cout << "No node to delete." << "\n";
         return;
     }
-    //single node
-    else if(head == tail){
-        Node* temp = head;
-        head = NULL;
-        tail = NULL; 
-        delete temp;
-    }
-    //multiple nodes
+
     Node* temp = head;
     Node* prev = NULL;
+
     // Traverse the list to find the node with the given value
     while(temp != NULL && temp->data != value){
         prev = temp;
@@ -101,10 +93,15 @@ int main()
     head = insertAtTail(25, head, tail);// 10-> 20-> 30-> 25-> NULL
     head = insertAtTail(50, head, tail);// 10-> 20-> 30-> 25-> 50-> NULL
     
-    int value = 50;
-    checkValue(head, value) ? std::cout << "value deleted.\n"  : std::cout << "value is not present in LL.\n";
-
-    deleteFromLL(head, tail, value);
+    int value = 60;
+    if (checkValue(head, value)) {
+        deleteFromLL(head, tail, value);
+        std::cout << "Value deleted.\n";
+    } 
+    else {
+        std::cout << "Value is not present in LL.\n";
+    }    
+    
     printLL(head);
 
     return 0;
