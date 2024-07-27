@@ -1,5 +1,6 @@
 #include<vector>
 #include<string>
+
 using namespace std;
 
 class Solution{
@@ -23,42 +24,61 @@ class Solution{
             return;
         }
         //recursion
-        //up
-        int newx = srcx-1;
-        int newy = srcy;
-        if(isSafe(newx, newy, m, visited, n)){
-            visited[newx][newy] = true;
-            solve(m,visited,n,ans,newx,newy,destx, desty,output+"U");
-            //when backtracking, mark visited as false
-            visited[newx][newy] = false;
-        } 
-        //down
-        newx = srcx+1;
-        newy = srcy;
-        if(isSafe(newx, newy, m, visited, n)){
-            visited[newx][newy] = true;
-            solve(m,visited,n,ans,newx,newy,destx, desty,output+"D");
-            //when backtracking, mark visited as false
-            visited[newx][newy] = false;
-        } 
-        //left
-        newx = srcx;
-        newy = srcy-1;
-        if(isSafe(newx, newy, m, visited, n)){
-            visited[newx][newy] = true;
-            solve(m,visited,n,ans,newx,newy,destx, desty,output+"L");
-            //when backtracking, mark visited as false
-            visited[newx][newy] = false;
-        } 
-        //right
-        newx = srcx;
-        newy = srcy+1;
-        if(isSafe(newx, newy, m, visited, n)){
-            visited[newx][newy] = true;
-            solve(m,visited,n,ans,newx,newy,destx, desty,output+"R");
-            //when backtracking, mark visited as false
-            visited[newx][newy] = false;
-        } 
+
+        // //up
+        // int newx = srcx-1;
+        // int newy = srcy;
+        // if(isSafe(newx, newy, m, visited, n)){
+        //     visited[newx][newy] = true;
+        //     solve(m,visited,n,ans,newx,newy,destx, desty,output+"U");
+        //     //when backtracking, mark visited as false
+        //     visited[newx][newy] = false;
+        // } 
+        // //down
+        // newx = srcx+1;
+        // newy = srcy;
+        // if(isSafe(newx, newy, m, visited, n)){
+        //     visited[newx][newy] = true;
+        //     solve(m,visited,n,ans,newx,newy,destx, desty,output+"D");
+        //     //when backtracking, mark visited as false
+        //     visited[newx][newy] = false;
+        // } 
+        // //left
+        // newx = srcx;
+        // newy = srcy-1;
+        // if(isSafe(newx, newy, m, visited, n)){
+        //     visited[newx][newy] = true;
+        //     solve(m,visited,n,ans,newx,newy,destx, desty,output+"L");
+        //     //when backtracking, mark visited as false
+        //     visited[newx][newy] = false;
+        // } 
+        // //right
+        // newx = srcx;
+        // newy = srcy+1;
+        // if(isSafe(newx, newy, m, visited, n)){
+        //     visited[newx][newy] = true;
+        //     solve(m,visited,n,ans,newx,newy,destx, desty,output+"R");
+        //     //when backtracking, mark visited as false
+        //     visited[newx][newy] = false;
+        // } 
+        
+        //combined code using loop but t.c. remains the same
+        int dx[] = {-1,1,0,0};
+        int dy[] = {0,0,-1,1};
+        char move[] = {'U', 'D', 'L', 'R'};
+        for(int i = 0; i < 4; i++){
+            int newx = srcx + dx[i];
+            int newy = srcy + dy[i];
+            char movement = move[i];
+            
+            if(isSafe(newx, newy, m, visited, n)){
+                visited[newx][newy] = true;
+                output.push_back(movement);
+                solve(m,visited,n,ans,newx,newy,destx, desty,output);
+                output.pop_back();
+                visited[newx][newy] = false;
+            }
+        }
     }
     vector<string> findPath(vector<vector<int>> &m, int n) {
         // Your code goes here
