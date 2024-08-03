@@ -212,17 +212,81 @@ using namespace std;
 
 // }
 
-class Student {
-    int a;
-    public: float a;
-};
+// class Student {
+//     int a;
+//     public: float a;
+// };
 
+
+// int main() {
+
+//     Student s;
+//     s->a;
+//     std::cout << 
+
+
+// }
+
+
+
+// int main(){
+//     vector<int> arr = {3,5,2,8,6};
+//     int size = 5;
+
+//     vector<int> copy(size);
+    
+//     std::sort(arr.begin(), arr.end());
+//     for(int i = 0; i < size; i++){
+//         copy[i] = arr[i];
+//     }
+//     std::cout << "After sort, arr: \n";
+//     for(int i = 0; i < size; i++){
+//         std::cout << arr[i] << " ";
+//     }
+
+//     std::reverse(copy.begin(), copy.end());
+//     std::cout << "After reverse, copy: \n";
+//     for(int i = 0; i < size; i++){
+//         std::cout << copy[i] << " ";
+//     }
+// }
+
+
+
+vector<int> transform(vector<int> arr) {
+	// Write your code here
+	int size = arr.size();
+
+	vector<int>copy(size);
+	for(int i = 0; i < size; i++){
+		copy[i] = arr[i];
+	}
+	sort(arr.begin(), arr.end());
+
+	vector<int> ans(size);
+
+	for(int i = 0; i < size; i++){
+		bool found = false;
+		for(int j = size-1; j >=0 ; j--){
+			if(copy[i] > arr[j]){
+				ans[i] = arr[j];
+                found = true;
+				break;
+			}
+		}
+		if(!found){
+			ans[i] = copy[i];
+		}
+	}
+	return ans;
+} 
 
 int main() {
+    vector<int> arr= {3,5,2,8,6};
+    vector<int> ans = transform(arr);
 
-    Student s;
-    s->a;
-    std::cout << 
-
-
+    for(int i = 0; i < arr.size(); i++){
+        std::cout << ans[i] << " ";
+    }
 }
+// ex o/p = 2, 3, 2, 6, 5
