@@ -97,30 +97,30 @@ void insertAtPosition(int position, int value, Node* &head, Node* &tail) {
 int main()
 {
 
-    // Node* head = NULL;
-    // Node* tail = NULL;
-    // //ll is empty
-    // head = insertAtHead(10, head, tail); //10 -> NULL
-    // print(head);
-    // head = insertAtHead(20, head, tail); //20-> 10-> NULL
-    // print(head);
-    // head = insertAtHead(30, head, tail); //30-> 20-> 10-> NULL
-    // print(head);
-
     Node* head = NULL;
     Node* tail = NULL;
-    head = insertAtTail(101, head, tail);// 101-> NULL
-    // print(head);
-    head = insertAtTail(102, head, tail);// 101-> 102-> NULL
-    // print(head);
-    head = insertAtTail(103, head, tail);// 101-> 102-> 103-> NULL
-    // print(head);
-    insertAtPosition(1, 55, head, tail);// 55-> 101-> 102-> 103-> NULL
+    //ll is empty
+    head = insertAtHead(10, head, tail); //10 -> NULL
     print(head);
-    insertAtPosition(5, 60, head, tail);// 55-> 101-> 102-> 103-> 60-> NULL
+    head = insertAtHead(20, head, tail); //20-> 10-> NULL
     print(head);
-    insertAtPosition(3, 65, head, tail);// 55-> 101-> 65-> 102-> 103-> 60-> NULL
+    head = insertAtHead(30, head, tail); //30-> 20-> 10-> NULL
     print(head);
+
+    // Node* head = NULL;
+    // Node* tail = NULL;
+    // head = insertAtTail(101, head, tail);// 101-> NULL
+    // // print(head);
+    // head = insertAtTail(102, head, tail);// 101-> 102-> NULL
+    // // print(head);
+    // head = insertAtTail(103, head, tail);// 101-> 102-> 103-> NULL
+    // // print(head);
+    // insertAtPosition(1, 55, head, tail);// 55-> 101-> 102-> 103-> NULL
+    // print(head);
+    // insertAtPosition(5, 60, head, tail);// 55-> 101-> 102-> 103-> 60-> NULL
+    // print(head);
+    // insertAtPosition(3, 65, head, tail);// 55-> 101-> 65-> 102-> 103-> 60-> NULL
+    // print(head);
 
     // // stack memory
     // Node first;

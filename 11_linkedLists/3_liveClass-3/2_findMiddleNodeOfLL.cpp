@@ -1,5 +1,6 @@
 // Bruteforce Approach
 #include<iostream>
+#include<cmath>
 
 class Node
 {
@@ -116,13 +117,14 @@ int main()
     
     insertAtPosition(head, tail, 10, 1);
     insertAtPosition(head, tail, 20, 2);
-    insertAtPosition(head, tail, 30, 3);
-    insertAtPosition(head, tail, 40, 4);
-    insertAtPosition(head, tail, 50, 5);
+    insertAtPosition(head, tail, 0, 3);
+    insertAtPosition(head, tail, 20, 4);
+    insertAtPosition(head, tail, 59, 5);
     
     print(head);
     int ans = findMiddleOfLL(head);
     
     std::cout << ans;
+
     return 0;
 }

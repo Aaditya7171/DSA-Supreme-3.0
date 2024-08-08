@@ -253,40 +253,148 @@ using namespace std;
 
 
 
-vector<int> transform(vector<int> arr) {
-	// Write your code here
-	int size = arr.size();
+// vector<int> transform(vector<int> arr) {
+// 	// Write your code here
+// 	int size = arr.size();
 
-	vector<int>copy(size);
-	for(int i = 0; i < size; i++){
-		copy[i] = arr[i];
-	}
-	sort(arr.begin(), arr.end());
+// 	vector<int>copy(size);
+// 	for(int i = 0; i < size; i++){
+// 		copy[i] = arr[i];
+// 	}
+// 	sort(arr.begin(), arr.end());
 
-	vector<int> ans(size);
+// 	vector<int> ans(size);
 
-	for(int i = 0; i < size; i++){
-		bool found = false;
-		for(int j = size-1; j >=0 ; j--){
-			if(copy[i] > arr[j]){
-				ans[i] = arr[j];
-                found = true;
-				break;
-			}
-		}
-		if(!found){
-			ans[i] = copy[i];
-		}
-	}
-	return ans;
-} 
+// 	for(int i = 0; i < size; i++){
+// 		bool found = false;
+// 		for(int j = size-1; j >=0 ; j--){
+// 			if(copy[i] > arr[j]){
+// 				ans[i] = arr[j];
+//                 found = true;
+// 				break;
+// 			}
+// 		}
+// 		if(!found){
+// 			ans[i] = copy[i];
+// 		}
+// 	}
+// 	return ans;
+// } 
 
-int main() {
-    vector<int> arr= {3,5,2,8,6};
-    vector<int> ans = transform(arr);
+// int main() {
+//     vector<int> arr= {3,5,2,8,6};
+//     vector<int> ans = transform(arr);
 
-    for(int i = 0; i < arr.size(); i++){
-        std::cout << ans[i] << " ";
-    }
-}
+//     for(int i = 0; i < arr.size(); i++){
+//         std::cout << ans[i] << " ";
+//     }
+// }
 // ex o/p = 2, 3, 2, 6, 5
+
+vector<int> reverseArray(vector<int> &a) {
+    int n = a.size();
+    int low = 0, high = n - 1;
+    while(low < high){
+        if(a[low] < a[high]){
+            std::swap(a[low], a[high]);
+            low++, high--;
+        }
+    }
+    return a;
+}
+
+void print(vector<int> arr){
+	for(int i = 0; i < arr.size(); i++){
+		std::cout << arr[i] << " ";
+	}
+	std::cout << "\n";
+}
+
+int main(){
+	std::vector<int> arr1 = {1,2,3,4,5};
+	std::vector<int> arr2 = {1,2,3,4};
+
+    std::cout << arr1[1];
+	// reverseArray(arr1);
+	// reverseArray(arr2);
+
+	// print(arr1);
+	// print(arr2);
+
+	return 0;
+}
+purple
+// Bruteforce Approach
+// #include<iostream>
+// #include<cmath>
+
+// class Node
+// {
+// public:
+//     Node* prev;
+//     int data;
+//     Node* next;
+
+//     Node(int value){
+//         prev = NULL;
+//         data = value;
+//         next = NULL;
+//     }
+// };
+
+// int getLen(Node* head)
+// {
+//     int len = 0;
+//     Node* temp = head;
+//     while(temp != NULL){
+//         len+=1;
+//         temp = temp->next;
+//     }
+//     return len;
+// }
+
+// void printLL(Node* head){
+//     while(head != NULL) {
+//         std::cout << head->data << " ";
+//         head = head->next;
+//     }
+//     std::cout<<"\n";
+// }
+
+// void printArr(int arr[], int size){
+//     for(int i = 0; i < size; i++){
+// 		std::cout << arr[i] << " ";
+// 	}
+//     std::cout<<"\n";
+// }
+
+// int* llToArr(Node* head, int size){
+//     int* arr = new int[size];
+
+// 	Node* temp = head;
+// 	int index = 0;
+// 	while(temp != NULL){
+// 		arr[index] = temp->data;
+// 		temp = temp->next;
+// 		index++;
+// 	}
+// 	return arr;
+// }
+
+// int main()
+// {   
+//     Node* head = new Node(1);
+//     head->next = new Node(2);
+//     head->next->next = new Node(3);
+//     head->next->next->next = new Node(4);
+//     head->next->next->next->next = new Node(5);
+    
+//     printLL(head);
+	
+// 	int size = getLen(head);
+// 	int* arr = llToArr(head, size);
+	
+//     printArr(arr, size);
+    
+//     return 0;
+// }

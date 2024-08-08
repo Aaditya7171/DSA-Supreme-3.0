@@ -95,7 +95,7 @@ int main()
     head = insertAtTail(25, head, tail);// 10-> 20-> 30-> 25-> NULL
     head = insertAtTail(50, head, tail);// 10-> 20-> 30-> 25-> 50-> NULL
     
-    int position = 6;
+    int position = 3;
     if(position > getLen(head)) std::cout << "Please enter a valid position." << "\n";
     deleteFromLL(head, tail, position);
     printLL(head);
