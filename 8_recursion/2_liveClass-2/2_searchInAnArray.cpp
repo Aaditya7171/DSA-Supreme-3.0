@@ -20,7 +20,7 @@ int main()
 {
     int arr[] = {10,20,30,40,50,60};
 
-    int size = 6, index = 0, target = 5;
+    int size = 6, index = 0, target = 500;
 
     std::cout << searchArr(arr, size, index, target);
 

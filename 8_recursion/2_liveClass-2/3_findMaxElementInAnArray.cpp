@@ -1,30 +1,27 @@
 #include<iostream>
 #include<climits>
+#include<algorithm>
 
-int findMaxElement(int arr[], int size, int index, int &maxElem)
+void findMaxElement(int arr[], int size, int index, int & maxElem)
 {
 
     if(index == size){
-        return 0;
+        return;
     }
 
-    if(arr[index] > maxElem){
-        maxElem = arr[index];
-    }
+    maxElem = std::max(maxElem, arr[index]);
 
-    return findMaxElement(arr, size, index+1, maxElem);
-
-
+    findMaxElement(arr, size, index+1, maxElem); 
 }
 
 int main()
 {
-    int arr[] = {10,20,30,40,50,55,60,80};
+    int arr[] = {1000,20,30,40,990,55,60,80};
     int size = 8, index = 0, maxElem = INT_MIN;
     
-    int ans = findMaxElement(arr, size, index, maxElem);
+    findMaxElement(arr, size, index, maxElem);
 
-    std::cout << "Max element in the array is: " << ans;
+    std::cout << "Max element in the array is: " << maxElem;
 
     return 0;
 }
