@@ -1,6 +1,8 @@
 #include<iostream>
 #include<vector>
 
+
+//updated- need to revert
 void storeOddElements(std::vector<int> &oddElements, std::vector<int> arr, int size, int index)
 {
     if(index == size){
