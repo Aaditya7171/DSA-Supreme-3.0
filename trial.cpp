@@ -291,39 +291,39 @@ using namespace std;
 // }
 // ex o/p = 2, 3, 2, 6, 5
 
-vector<int> reverseArray(vector<int> &a) {
-    int n = a.size();
-    int low = 0, high = n - 1;
-    while(low < high){
-        if(a[low] < a[high]){
-            std::swap(a[low], a[high]);
-            low++, high--;
-        }
-    }
-    return a;
-}
+// vector<int> reverseArray(vector<int> &a) {
+//     int n = a.size();
+//     int low = 0, high = n - 1;
+//     while(low < high){
+//         if(a[low] < a[high]){
+//             std::swap(a[low], a[high]);
+//             low++, high--;
+//         }
+//     }
+//     return a;
+// }
 
-void print(vector<int> arr){
-	for(int i = 0; i < arr.size(); i++){
-		std::cout << arr[i] << " ";
-	}
-	std::cout << "\n";
-}
+// void print(vector<int> arr){
+// 	for(int i = 0; i < arr.size(); i++){
+// 		std::cout << arr[i] << " ";
+// 	}
+// 	std::cout << "\n";
+// }
 
-int main(){
-	std::vector<int> arr1 = {1,2,3,4,5};
-	std::vector<int> arr2 = {1,2,3,4};
+// int main(){
+// 	std::vector<int> arr1 = {1,2,3,4,5};
+// 	std::vector<int> arr2 = {1,2,3,4};
 
-    std::cout << arr1[1];
-	// reverseArray(arr1);
-	// reverseArray(arr2);
+//     std::cout << arr1[1];
+// 	// reverseArray(arr1);
+// 	// reverseArray(arr2);
 
-	// print(arr1);
-	// print(arr2);
+// 	// print(arr1);
+// 	// print(arr2);
 
-	return 0;
-}
-purple
+// 	return 0;
+// }
+
 // Bruteforce Approach
 // #include<iostream>
 // #include<cmath>
@@ -398,3 +398,29 @@ purple
     
 //     return 0;
 // }
+
+
+int birthday(vector<int> s, int d, int m) {
+    int count = 0;
+    for(int i = 0; i < s.size(); i++){
+        int ans = 0;
+        for(int j = 0; j < m; j++){
+               ans = ans + s[j];
+            }
+        if(ans == d){
+            count++;
+			i++;
+        }
+    }
+    return count;
+}
+
+int main(){
+	std::vector<int> arr1 = {1,2,1,3,2};
+    
+    
+    int res = birthday(arr1,3,2);
+    
+	std::cout << res;
+	return 0;
+}
