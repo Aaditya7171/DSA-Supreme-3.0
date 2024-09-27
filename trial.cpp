@@ -400,27 +400,50 @@ using namespace std;
 // }
 
 
-int birthday(vector<int> s, int d, int m) {
-    int count = 0;
-    for(int i = 0; i < s.size(); i++){
-        int ans = 0;
-        for(int j = 0; j < m; j++){
-               ans = ans + s[j];
-            }
-        if(ans == d){
-            count++;
-			i++;
-        }
+// int birthday(vector<int> s, int d, int m) {
+//     int count = 0;
+//     for(int i = 0; i < s.size(); i++){
+//         int ans = 0;
+//         for(int j = 0; j < m; j++){
+//                ans = ans + s[j];
+//             }
+//         if(ans == d){
+//             count++;
+// 			i++;
+//         }
+//     }
+//     return count;
+// }
+
+// int main(){
+// 	std::vector<int> arr1 = {1,2,1,3,2};
+    
+    
+//     int res = birthday(arr1,3,2);
+    
+// 	std::cout << res;
+// 	return 0;
+// }
+
+int diagonalDifference(vector<vector<int>> arr) {
+    int leftToRightDiagonalSum = 0, rightToLeftDiagonalSum = 0;
+    int rSize = arr.size();
+    for(int i = 0; i < rSize; i++) {
+        leftToRightDiagonalSum += arr[i][i];
+        rightToLeftDiagonalSum += arr[i][rSize];
     }
-    return count;
+    return abs(leftToRightDiagonalSum - rightToLeftDiagonalSum);
 }
 
-int main(){
-	std::vector<int> arr1 = {1,2,1,3,2};
-    
-    
-    int res = birthday(arr1,3,2);
-    
-	std::cout << res;
-	return 0;
+int main()
+{
+    std::vector<vector<int>> arr = {
+        {1,2,4},
+        {4,5,6},
+        {2,8,9}
+    };
+
+    std::cout << diagonalDifference(arr);
+
+    return 0;
 }
