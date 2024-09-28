@@ -425,25 +425,26 @@ using namespace std;
 // 	return 0;
 // }
 
-int diagonalDifference(vector<vector<int>> arr) {
-    int leftToRightDiagonalSum = 0, rightToLeftDiagonalSum = 0;
-    int rSize = arr.size();
-    for(int i = 0; i < rSize; i++) {
-        leftToRightDiagonalSum += arr[i][i];
-        rightToLeftDiagonalSum += arr[i][rSize];
-    }
-    return abs(leftToRightDiagonalSum - rightToLeftDiagonalSum);
-}
+// int diagonalDifference(vector<vector<int>> arr) {
+//     int leftToRightDiagonalSum = 0, rightToLeftDiagonalSum = 0;
+//     int rSize = arr.size();
+//     for(int i = 0; i < rSize; i++) {
+//         leftToRightDiagonalSum += arr[i][i];
+//         rightToLeftDiagonalSum += arr[i][rSize];
+//     }
+//     return abs(leftToRightDiagonalSum - rightToLeftDiagonalSum);
+// }
 
-int main()
-{
-    std::vector<vector<int>> arr = {
-        {1,2,4},
-        {4,5,6},
-        {2,8,9}
-    };
+// int main()
+// {
+//     std::vector<vector<int>> arr = {
+//         {1,2,4},
+//         {4,5,6},
+//         {2,8,9}
+//     };
 
-    std::cout << diagonalDifference(arr);
+//     std::cout << diagonalDifference(arr);
 
-    return 0;
-}
+//     return 0;
+// }
+

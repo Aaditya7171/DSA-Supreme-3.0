@@ -7,7 +7,7 @@ bool checkSorted(int arr[], int size, int i)
     bool currAns = false, recAns = false;
     if(arr[i + 1] > arr[i]) currAns = true;
     
-    recAns = checkSorted(arr, size, i+1   );
+    recAns = checkSorted(arr, size, i+1);
     return (currAns && recAns);
 }
 
