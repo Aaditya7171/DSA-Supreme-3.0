@@ -15,7 +15,7 @@ public:
             for(int j = 0; j < n; j++){
                 output.push_back(board[i][j]);
             }
-            tempAns.push_back(output);
+            tempAns.push_back(output);//a possible solution is ready, push_back it to ans
         }
         ans.push_back(tempAns);
     }
