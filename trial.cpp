@@ -193,24 +193,24 @@ using namespace std;
 //     return 0;
 // }
 
-int main() {
-    int x[3][5] = {
-        {1,2,3,4,5},
-        {6,7,8,9,10},
-        {11,12,13,14,15}
-    };
-    int *n = &x[0][0];
+// int main() {
+//     int x[3][5] = {
+//         {1,2,3,4,5},
+//         {6,7,8,9,10},
+//         {11,12,13,14,15}
+//     };
+//     int *n = &x[0][0];
 
-    cout << *(*(x+2) + 1) << " ";
-    cout << *x;
-    cout << *(*x + 2) + 5;
-    cout << *(*(x+1));
-    cout << *(*(x) + 2) + 1;
-    cout << *(*(x+1) + 3);
-    cout << *(n+2);
-    cout << *n++;
+//     cout << *(*(x+2) + 1) << " ";
+//     cout << *x;
+//     cout << *(*x + 2) + 5;
+//     cout << *(*(x+1));
+//     cout << *(*(x) + 2) + 1;
+//     cout << *(*(x+1) + 3);
+//     cout << *(n+2);
+//     cout << *n++;
 
-}
+// }
 
 // class Student {
 //     int a;
@@ -448,3 +448,56 @@ int main() {
 //     return 0;
 // }
 
+
+#include<stack>
+
+ void nextSmallerElement(std::vector<int> &heights, std::vector<int> &nextAns){
+        stack<int> st;
+        st.push(-1);
+        int n = heights.size();
+
+        for(int i = n - 1; i >= 0; i--){
+            int elem = heights[i];
+            while(st.top() != -1 && heights[st.top()] > elem){
+                st.pop();
+            }
+            //if we reached here that means either -1 or any smaller element is at the top of the stack
+            nextAns.push_back(st.top());
+            st.push(i);
+        } 
+    }
+
+    void prevSmallerElement(std::vector<int> &heights, std::vector<int> &prevAns){
+        stack<int> st;
+        st.push(-1);
+        int n = heights.size();
+
+        for(int i = 0; i < n; i++){
+            int elem = heights[i];
+            while(st.top() != -1 && heights[st.top()] > elem){
+                st.pop();
+            }
+            prevAns.push_back(st.top());
+            st.push(i);
+        } 
+    }
+
+    int main(){
+
+    std::vector<int> arr = {2,4};
+    std::vector<int> nextAns;
+    std::vector<int> prevAns;
+
+    prevSmallerElement(arr, prevAns);
+    nextSmallerElement(arr, nextAns);
+ 
+    for(int i : prevAns){
+        std::cout << i << " ";
+    } std::cout << "\n";
+    
+    for(int i : nextAns){
+        std::cout << i << " ";
+    } std::cout << "\n";
+
+    return 0;
+}
