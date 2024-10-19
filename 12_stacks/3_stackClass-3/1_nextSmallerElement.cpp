@@ -3,7 +3,6 @@
 #include<vector>
 #include<algorithm>
 
-
 void nextSmallerElem(std::vector<int> &arr, std::stack<int> &s, std::vector<int> &ans){
     int n = arr.size();
     for(int i = n - 1; i >= 0; i--){

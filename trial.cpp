@@ -449,55 +449,59 @@ using namespace std;
 // }
 
 
-#include<stack>
+// #include<stack>
 
- void nextSmallerElement(std::vector<int> &heights, std::vector<int> &nextAns){
-        stack<int> st;
-        st.push(-1);
-        int n = heights.size();
+//  void nextSmallerElement(std::vector<int> &heights, std::vector<int> &nextAns){
+//         stack<int> st;
+//         st.push(-1);
+//         int n = heights.size();
 
-        for(int i = n - 1; i >= 0; i--){
-            int elem = heights[i];
-            while(st.top() != -1 && heights[st.top()] > elem){
-                st.pop();
-            }
-            //if we reached here that means either -1 or any smaller element is at the top of the stack
-            nextAns.push_back(st.top());
-            st.push(i);
-        } 
-    }
+//         for(int i = n - 1; i >= 0; i--){
+//             int elem = heights[i];
+//             while(st.top() != -1 && heights[st.top()] > elem){
+//                 st.pop();
+//             }
+//             //if we reached here that means either -1 or any smaller element is at the top of the stack
+//             nextAns.push_back(st.top());
+//             st.push(i);
+//         } 
+//     }
 
-    void prevSmallerElement(std::vector<int> &heights, std::vector<int> &prevAns){
-        stack<int> st;
-        st.push(-1);
-        int n = heights.size();
+//     void prevSmallerElement(std::vector<int> &heights, std::vector<int> &prevAns){
+//         stack<int> st;
+//         st.push(-1);
+//         int n = heights.size();
 
-        for(int i = 0; i < n; i++){
-            int elem = heights[i];
-            while(st.top() != -1 && heights[st.top()] > elem){
-                st.pop();
-            }
-            prevAns.push_back(st.top());
-            st.push(i);
-        } 
-    }
+//         for(int i = 0; i < n; i++){
+//             int elem = heights[i];
+//             while(st.top() != -1 && heights[st.top()] > elem){
+//                 st.pop();
+//             }
+//             prevAns.push_back(st.top());
+//             st.push(i);
+//         } 
+//     }
 
-    int main(){
+//     int main(){
 
-    std::vector<int> arr = {2,4};
-    std::vector<int> nextAns;
-    std::vector<int> prevAns;
+//     std::vector<int> arr = {2,4};
+//     std::vector<int> nextAns;
+//     std::vector<int> prevAns;
 
-    prevSmallerElement(arr, prevAns);
-    nextSmallerElement(arr, nextAns);
+//     prevSmallerElement(arr, prevAns);
+//     nextSmallerElement(arr, nextAns);
  
-    for(int i : prevAns){
-        std::cout << i << " ";
-    } std::cout << "\n";
+//     for(int i : prevAns){
+//         std::cout << i << " ";
+//     } std::cout << "\n";
     
-    for(int i : nextAns){
-        std::cout << i << " ";
-    } std::cout << "\n";
+//     for(int i : nextAns){
+//         std::cout << i << " ";
+//     } std::cout << "\n";
 
-    return 0;
+//     return 0;
+// }
+
+int main(){
+    std::cout << (-2) % 3;
 }
