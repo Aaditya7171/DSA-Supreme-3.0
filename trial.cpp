@@ -1,6 +1,6 @@
 #include <iostream>
-#include<vector>
-#include<algorithm>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 // // // int main() {
@@ -9,8 +9,7 @@ using namespace std;
 // // //         cout << "babber" << endl;
 // // //     }
 // // //     return 0;
-// // // } 
-
+// // // }
 
 // // // class Solution {
 // // // public:
@@ -34,9 +33,6 @@ using namespace std;
 // // //         return pairs;
 // // //     }
 // // // };
-
-
-
 
 // // // int main() {
 // // //     Solution solution;
@@ -142,7 +138,7 @@ using namespace std;
 //     std::cin >> start >> end;
 
 //     std::cout << "Palindrome numbers in the range " << start << " to " << end << " are:\n";
-    
+
 //     for(num = start; num <= end; num++) {
 //         if(checkPalindrome(num)) {
 //             std::cout << num << std::endl;
@@ -154,13 +150,13 @@ using namespace std;
 
 // class Solution {
 // public:
-    
+
 //     int countPrimes(int low, int high) {
 //         if (high <= 2) return 0;
 //         if (low < 2) low = 2;
-        
+
 //         int size = high-low;
-//         vector<bool> prime(size, true);        
+//         vector<bool> prime(size, true);
 
 //         int count = 0;
 
@@ -183,9 +179,9 @@ using namespace std;
 //     Solution sol;
 
 //     int low = 10;
-    
+
 //     int high = 21;
-    
+
 //     int ans = sol.countPrimes(low, high);
 
 //     cout << ans;
@@ -217,24 +213,20 @@ using namespace std;
 //     public: float a;
 // };
 
-
 // int main() {
 
 //     Student s;
 //     s->a;
-//     std::cout << 
-
+//     std::cout <<
 
 // }
-
-
 
 // int main(){
 //     vector<int> arr = {3,5,2,8,6};
 //     int size = 5;
 
 //     vector<int> copy(size);
-    
+
 //     std::sort(arr.begin(), arr.end());
 //     for(int i = 0; i < size; i++){
 //         copy[i] = arr[i];
@@ -250,8 +242,6 @@ using namespace std;
 //         std::cout << copy[i] << " ";
 //     }
 // }
-
-
 
 // vector<int> transform(vector<int> arr) {
 // 	// Write your code here
@@ -279,7 +269,7 @@ using namespace std;
 // 		}
 // 	}
 // 	return ans;
-// } 
+// }
 
 // int main() {
 //     vector<int> arr= {3,5,2,8,6};
@@ -382,23 +372,22 @@ using namespace std;
 // }
 
 // int main()
-// {   
+// {
 //     Node* head = new Node(1);
 //     head->next = new Node(2);
 //     head->next->next = new Node(3);
 //     head->next->next->next = new Node(4);
 //     head->next->next->next->next = new Node(5);
-    
+
 //     printLL(head);
-	
+
 // 	int size = getLen(head);
 // 	int* arr = llToArr(head, size);
-	
+
 //     printArr(arr, size);
-    
+
 //     return 0;
 // }
-
 
 // int birthday(vector<int> s, int d, int m) {
 //     int count = 0;
@@ -417,10 +406,9 @@ using namespace std;
 
 // int main(){
 // 	std::vector<int> arr1 = {1,2,1,3,2};
-    
-    
+
 //     int res = birthday(arr1,3,2);
-    
+
 // 	std::cout << res;
 // 	return 0;
 // }
@@ -448,7 +436,6 @@ using namespace std;
 //     return 0;
 // }
 
-
 // #include<stack>
 
 //  void nextSmallerElement(std::vector<int> &heights, std::vector<int> &nextAns){
@@ -464,7 +451,7 @@ using namespace std;
 //             //if we reached here that means either -1 or any smaller element is at the top of the stack
 //             nextAns.push_back(st.top());
 //             st.push(i);
-//         } 
+//         }
 //     }
 
 //     void prevSmallerElement(std::vector<int> &heights, std::vector<int> &prevAns){
@@ -479,7 +466,7 @@ using namespace std;
 //             }
 //             prevAns.push_back(st.top());
 //             st.push(i);
-//         } 
+//         }
 //     }
 
 //     int main(){
@@ -490,11 +477,11 @@ using namespace std;
 
 //     prevSmallerElement(arr, prevAns);
 //     nextSmallerElement(arr, nextAns);
- 
+
 //     for(int i : prevAns){
 //         std::cout << i << " ";
 //     } std::cout << "\n";
-    
+
 //     for(int i : nextAns){
 //         std::cout << i << " ";
 //     } std::cout << "\n";
@@ -502,6 +489,135 @@ using namespace std;
 //     return 0;
 // }
 
-int main(){
-    std::cout << (-2) % 3;
+// int main(){
+//     std::cout << (-2) % 3;
+// }
+
+// #include <algorithm>
+// #include <algorithm>
+// #include <algorithm>
+
+// int main()
+// {
+//     std::cout << min(5, 55);
+// }
+
+//             *
+//           *   *
+//         *       *
+// * * * *          * * * *
+//   *                  *
+//     *               *
+//       *           *
+//        *    *   *
+//       *    * *   *
+//      *   *     *  *
+//     *  *         * *
+//    *                *
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void printStarPattern(int size)
+// {
+//     // Create a 2D vector to store the pattern
+//     vector<vector<char>> pattern(size, vector<char>(size, ' '));
+
+//     // Points for the star shape
+//     // Left points
+//     pattern[size / 2][size / 4] = '*';
+//     for (int i = 1; i <= size / 4; i++)
+//     {
+//         pattern[size / 2 - i][size / 4 - i] = '*';
+//         pattern[size / 2 + i][size / 4 - i] = '*';
+//     }
+
+//     // Right points
+//     pattern[size / 2][3 * size / 4] = '*';
+//     for (int i = 1; i <= size / 4; i++)
+//     {
+//         pattern[size / 2 - i][3 * size / 4 + i] = '*';
+//         pattern[size / 2 + i][3 * size / 4 + i] = '*';
+//     }
+
+//     // Top points
+//     for (int i = 0; i <= size / 4; i++)
+//     {
+//         pattern[size / 4 + i][size / 2 - i] = '*';
+//         pattern[size / 4 + i][size / 2 + i] = '*';
+//     }
+
+//     // Bottom points
+//     for (int i = 0; i <= size / 4; i++)
+//     {
+//         pattern[3 * size / 4 - i][size / 2 - i] = '*';
+//         pattern[3 * size / 4 - i][size / 2 + i] = '*';
+//     }
+
+//     // Print the pattern
+//     for (int i = 0; i < size; i++)
+//     {
+//         for (int j = 0; j < size; j++)
+//         {
+//             cout << pattern[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+// }
+
+// int main()
+// {
+//     int size;
+//     cout << "Enter the size of the pattern (recommend 20 or larger): ";
+//     cin >> size;
+
+//     if (size < 12)
+//     {
+//         cout << "Size too small for clear pattern. Please use 12 or larger.\n";
+//         return 1;
+//     }
+
+//     printStarPattern(size);
+//     return 0;
+// }
+
+// int findMedian(vector<int> arr)
+// {
+//     sort(arr.begin(), arr.end());
+//     int middle = arr.size() / 2;
+//     if (middle % 2 == 0)
+//     {
+//         int ans = (arr[middle] + arr[middle + 1]) / 2;
+//         return ans;
+//     }
+//     else
+//     {
+//         return arr[middle];
+//     }
+// }
+
+// int main()
+// {
+//     std::vector<int> arr = {1, 2, 3, 4};
+//     std::cout << findMedian(arr);
+
+//     return 0;
+// }
+
+int main()
+{
+
+    string s = "iAmAditya";
+    int count = 0;
+    for (auto i : s)
+    {
+        char ch = i;
+        int asciiValue = static_cast<int>(ch);
+        if (asciiValue >= 65 && asciiValue <= 90)
+        {
+            count++;
+        }
+    }
+    std::cout << count + 1;
 }
