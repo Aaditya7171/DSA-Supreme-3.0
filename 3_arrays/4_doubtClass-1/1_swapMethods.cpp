@@ -1,8 +1,8 @@
-#include<iostream>
+#include <iostream>
 
 void swapTwoNumbersMethod1(int a, int b)
 {
-    //using temporary variable
+    // using temporary variable
     int temp = a;
     a = b;
     b = temp;
@@ -12,27 +12,27 @@ void swapTwoNumbersMethod1(int a, int b)
 
 void swapTwoNumbersMethod2(int a, int b)
 {
-    //using swap function(inbuilt)
+    // using swap function(inbuilt)
     std::swap(a, b);
     std::cout << "Swapped numbers using swap function is: a = " << a << " b = " << b << '\n';
 }
 
 void swapTwoNumbersMethod3(int a, int b)
 {
-    //using xor(^)
-    a = a ^ b;// a = (5 ^ 10)
-    b = a ^ b;// b = ((5 ^ 10) ^ 10) = 5
-    a = a ^ b;// a = ((5 ^ 10) ^ 5) = 10
+    // using xor(^)
+    a = a ^ b; // a = (5 ^ 10)
+    b = a ^ b; // b = ((5 ^ 10) ^ 10) = 5
+    a = a ^ b; // a = ((5 ^ 10) ^ 5) = 10
 
     std::cout << "Swapped numbers using XOR is: a = " << a << " b = " << b << '\n';
 }
 
 void swapTwoNumbersMethod4(int a, int b)
 {
-    //using xor(^)
-    a = a + b;// a = 5 + 10
-    b = a - b;// b = 15 - 10 = 5
-    a = a - b;// a = 15 - 5 = 10
+    // using xor(+,-)
+    a = a + b; // a = 5 + 10
+    b = a - b; // b = 15 - 10 = 5
+    a = a - b; // a = 15 - 5 = 10
 
     std::cout << "Swapped numbers using '+' and '-' operators is: a = " << a << " b = " << b << '\n';
 }

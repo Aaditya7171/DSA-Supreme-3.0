@@ -605,19 +605,25 @@ using namespace std;
 //     return 0;
 // }
 
+// int main()
+// {
+
+//     string s = "iAmAditya";
+//     int count = 0;
+//     for (auto i : s)
+//     {
+//         char ch = i;
+//         int asciiValue = static_cast<int>(ch);
+//         if (asciiValue >= 65 && asciiValue <= 90)
+//         {
+//             count++;
+//         }
+//     }
+//     std::cout << count + 1;
+// }
+
 int main()
 {
-
-    string s = "iAmAditya";
-    int count = 0;
-    for (auto i : s)
-    {
-        char ch = i;
-        int asciiValue = static_cast<int>(ch);
-        if (asciiValue >= 65 && asciiValue <= 90)
-        {
-            count++;
-        }
-    }
-    std::cout << count + 1;
+    char ch = 'A';
+    std::cout << int(ch);
 }

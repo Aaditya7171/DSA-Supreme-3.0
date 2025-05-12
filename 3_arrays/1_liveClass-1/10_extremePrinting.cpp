@@ -1,12 +1,13 @@
-#include<iostream>
-#include<climits>
+#include <iostream>
+#include <climits>
 
 void extremePrint(int arr[], int n)
 {
     int left = 0;
     int right = n - 1;
 
-    while(left <= right) {
+    while (left <= right)
+    {
         std::cout << arr[left] << " ";
         left++;
         if (left <= right) // Check if left has not surpassed right
@@ -16,9 +17,9 @@ void extremePrint(int arr[], int n)
     return;
 }
 
-int main() 
+int main()
 {
-    int arr[] = {10, 20, 30, 40 ,50, 60};
+    int arr[] = {10, 20, 30, 40, 50, 60};
     int size = 6;
     extremePrint(arr, size);
     return 0;
