@@ -29,7 +29,7 @@ void swapTwoNumbersMethod3(int a, int b)
 
 void swapTwoNumbersMethod4(int a, int b)
 {
-    // using xor(+,-)
+    // using (+,-)
     a = a + b; // a = 5 + 10
     b = a - b; // b = 15 - 10 = 5
     a = a - b; // a = 15 - 5 = 10

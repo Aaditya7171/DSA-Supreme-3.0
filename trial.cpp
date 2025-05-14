@@ -622,8 +622,16 @@ using namespace std;
 //     std::cout << count + 1;
 // }
 
+// int main()
+// {
+//     char ch = 'A';
+//     std::cout << int(ch);
+// }
+
 int main()
 {
-    char ch = 'A';
-    std::cout << int(ch);
+    auto it = max_element(piles.begin(), piles.end()); // returns itrator
+    int e = *it;
+    auto it = max_element(piles.begin(), piles.end()); // returns itrator
+    int e = *it;
 }
