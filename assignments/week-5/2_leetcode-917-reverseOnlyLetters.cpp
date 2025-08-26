@@ -18,9 +18,8 @@ public:
         //Approach 2---> Two Pointer(O(1)-->space, in place reverse) 
         int l = 0, h = s.size() - 1;
         while(l < h){
-            if(isalpha(s[l]) && isalpha(s[h])){
+            if(isalpha(s[l]) && isalpha(s[h]))
                 swap(s[l], s[h]), l++, h--;
-            }
             else if(!isalpha(s[l])) l++;
             else h--;
         }
