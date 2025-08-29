@@ -635,3 +635,8 @@ using namespace std;
 //     auto it = max_element(piles.begin(), piles.end()); // returns itrator
 //     int e = *it;
 // }
+
+int main() {
+    vector<int> arr = {1,2,3,4,6};
+    cout << arr.end();
+}
