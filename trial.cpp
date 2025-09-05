@@ -635,3 +635,9 @@ using namespace std;
 //     auto it = max_element(piles.begin(), piles.end()); // returns itrator
 //     int e = *it;
 // }
+
+int main() {
+    int n = 4;
+    if(n&1) cout <<  "Odd";
+    else cout << "Even";
+}
