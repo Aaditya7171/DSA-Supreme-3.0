@@ -11,7 +11,7 @@ class Solution {
             
             while(!q.empty()){
                 // check whether the first element is answer or not
-                i    f(freqMap[q.front()] == 1){
+                if(freqMap[q.front()] == 1){
                     ans.push_back(q.front());
                     break;
                  }
