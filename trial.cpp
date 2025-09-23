@@ -638,6 +638,6 @@ using namespace std;
 
 int main() {
     int n = 4;
-    if(n&1) cout <<  "Odd";
-    else cout << "Even";
+    // if(n&1) cout <<  "Odd";
+    // else cout << "Even";
 }
