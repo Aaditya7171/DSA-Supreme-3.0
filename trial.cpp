@@ -636,8 +636,20 @@ using namespace std;
 //     int e = *it;
 // }
 
-int main() {
-    int n = 4;
-    // if(n&1) cout <<  "Odd";
-    // else cout << "Even";
+int main()
+{
+    int n = 7;
+    int ans = (++n * ++n);
+    cout << ans << endl;
+    int a = 7;
+    int ansa = (++a * a++);
+    cout << ansa << endl;
+    int b = 7;
+    int ansb = (b++ * b++);
+    cout << ansb << endl;
+    int c = 7;
+    int ansc = (c++ * ++c);
+    cout << ansc << endl;
+
+    return 0;
 }
